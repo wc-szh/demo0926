@@ -1,0 +1,131 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Mintlify core tokens (Refero) */
+  --color-mint-green: #0c8c5e;
+  --color-ink-black: #08090a;
+  --color-true-black: #000000;
+  --color-paper-white: #ffffff;
+  --color-mist-gray: #f2f2f2;
+  --color-cloud-gray: #dddddd;
+  --color-profile-sky: #e8f1f8;
+  --color-profile-gray: #f5f7f9;
+
+  --font-inter: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif;
+
+  /* shadcn semantic aliases */
+  --background: var(--color-paper-white);
+  --foreground: var(--color-true-black);
+  --card: var(--color-paper-white);
+  --card-foreground: var(--color-true-black);
+  --popover: var(--color-paper-white);
+  --popover-foreground: var(--color-true-black);
+  --primary: var(--color-ink-black);
+  --primary-foreground: var(--color-paper-white);
+  --secondary: var(--color-mist-gray);
+  --secondary-foreground: var(--color-true-black);
+  --muted: var(--color-mist-gray);
+  --muted-foreground: #666666;
+  --accent: color-mix(in srgb, var(--color-mint-green) 6%, transparent);
+  --accent-foreground: var(--color-mint-green);
+  --brand: var(--color-mint-green);
+  --brand-foreground: var(--color-paper-white);
+  --destructive: #dc2626;
+  --destructive-foreground: var(--color-paper-white);
+  --border: var(--color-mist-gray);
+  --input: var(--color-cloud-gray);
+  --ring: var(--color-mint-green);
+  --chart-1: var(--color-mint-green);
+  --chart-2: #3da87a;
+  --chart-3: #6ec4a0;
+  --sidebar: var(--color-paper-white);
+  --sidebar-foreground: var(--color-true-black);
+  --sidebar-primary: var(--color-mint-green);
+  --sidebar-primary-foreground: var(--color-mint-green);
+  --sidebar-accent: color-mix(in srgb, var(--color-mint-green) 6%, transparent);
+  --sidebar-accent-foreground: var(--color-mint-green);
+  --sidebar-border: var(--color-mist-gray);
+  --sidebar-ring: var(--color-mint-green);
+
+  --radius: 0.25rem;
+  --radius-card: 1rem;
+  --shadow-sm: lab(2.42579 -0.165291 -0.470081 / 0.03) 0px 2px 4px 0px;
+  --shadow-card: lab(100 0 0 / 0.05) 0px 2px 4px 0px;
+}
+
+@theme inline {
+  /* Colors */
+  --color-mint-green: #0c8c5e;
+  --color-ink-black: #08090a;
+  --color-true-black: #000000;
+  --color-paper-white: #ffffff;
+  --color-mist-gray: #f2f2f2;
+  --color-cloud-gray: #dddddd;
+  --color-profile-sky: #e8f1f8;
+  --color-profile-gray: #f5f7f9;
+
+  /* Typography */
+  --font-inter: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif;
+  --font-sans: var(--font-inter);
+
+  /* shadcn compat */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-brand: var(--brand);
+  --color-brand-foreground: var(--brand-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  --radius-sm: var(--radius);
+  --radius-md: var(--radius);
+  --radius-lg: var(--radius-card);
+  --radius-xl: 1.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-inter);
+    font-feature-settings: "ss01" on, "cv11" on;
+    letter-spacing: -0.01em;
+  }
+  h1,
+  h2,
+  h3 {
+    color: var(--color-ink-black);
+    letter-spacing: -0.02em;
+  }
+}
