@@ -37,10 +37,10 @@ export function AdminLayout() {
   }
 
   return (
-    <div className="flex min-h-screen bg-background">
-      <aside className="hidden w-60 shrink-0 border-r bg-sidebar lg:block">
-        <div className="flex h-14 items-center gap-2 border-b px-6">
-          <span className="h-2 w-2 rounded-sm bg-mint-green" />
+    <div className="flex min-h-screen bg-page">
+      <aside className="hidden w-60 shrink-0 border-r border-[#E5E6EB] bg-paper-white lg:block">
+        <div className="flex h-14 items-center gap-2 border-b border-[#E5E6EB] px-6">
+          <span className="h-2.5 w-2.5 rounded-sm bg-brand-blue" />
           <span className="text-base font-semibold text-sidebar-foreground">拾影 · 管理端</span>
         </div>
         <nav className="space-y-1 p-4">
@@ -52,7 +52,7 @@ export function AdminLayout() {
                 cn(
                   'flex items-center gap-3 rounded-sm px-3 py-2 text-sm transition-colors duration-200',
                   isActive
-                    ? 'bg-sidebar-accent font-medium text-mint-green'
+                    ? 'bg-sidebar-accent font-medium text-brand-blue-deep'
                     : 'text-sidebar-foreground hover:bg-muted',
                 )
               }
@@ -69,7 +69,7 @@ export function AdminLayout() {
         </nav>
       </aside>
       <div className="flex flex-1 flex-col">
-        <header className="flex h-14 items-center justify-between border-b px-6">
+        <header className="flex h-14 items-center justify-between border-b border-[#E5E6EB] bg-paper-white px-6">
           <p className="text-sm text-muted-foreground">
             {session?.displayName ? `${session.displayName}，欢迎回来` : '灵活用工协作平台'}
           </p>

@@ -96,7 +96,7 @@ function SummaryCard({
   onToggle: () => void
 }) {
   return (
-    <div className="rounded-2xl bg-mint-green p-4 text-paper-white shadow-[var(--shadow-card)]">
+    <div className="rounded-2xl bg-gradient-to-br from-[#3BA3FF] to-[#1677FF] p-4 text-paper-white shadow-[0_8px_20px_rgba(43,155,255,0.25)]">
       <p className="text-2xl font-semibold tabular-nums tracking-tight">{maskAmount(visible, amount)}</p>
       <div className="mt-2 flex items-center gap-1">
         <span className="text-xs text-paper-white/85">{label}</span>
@@ -119,7 +119,7 @@ function TaskListCard({ item }: { item: WorkerTaskItem }) {
   return (
     <Link
       to={item.detailPath}
-      className="flex items-start gap-3 rounded-2xl border border-border bg-paper-white p-3.5 shadow-[var(--shadow-card)] transition-colors duration-200 active:bg-mist-gray/30"
+      className="flex items-start gap-3 rounded-2xl bg-paper-white p-3.5 shadow-[0_4px_16px_rgba(29,33,41,0.04)] transition-colors duration-200 active:bg-mist-gray/30"
     >
       <TaskIcon item={item} />
       <div className="min-w-0 flex-1">
@@ -217,7 +217,7 @@ export function TasksAllPage() {
                 className={cn(
                   'shrink-0 rounded-full px-3.5 py-1.5 text-xs transition-colors duration-200',
                   statusFilter === value
-                    ? 'bg-ink-black font-medium text-paper-white'
+                    ? 'bg-brand-blue font-medium text-white'
                     : 'bg-paper-white text-muted-foreground',
                 )}
               >

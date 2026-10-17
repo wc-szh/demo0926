@@ -16,7 +16,7 @@ interface TaskJobCardProps {
 
 export function TaskJobCard({ job, followed, onToggleFollow, actions, className }: TaskJobCardProps) {
   return (
-    <div className={cn('rounded-2xl border border-border bg-paper-white p-4 shadow-[var(--shadow-card)]', className)}>
+    <div className={cn('rounded-lg bg-paper-white p-4 shadow-[0_4px_16px_rgba(29,33,41,0.04)]', className)}>
       <div className="flex items-start gap-2">
         <Link to={`/tasks/${job.id}`} className="min-w-0 flex-1 active:opacity-80">
           <div className="flex items-start justify-between gap-2">
@@ -36,7 +36,7 @@ export function TaskJobCard({ job, followed, onToggleFollow, actions, className 
             onClick={onToggleFollow}
           >
             <Star
-              className={cn('h-5 w-5', followed ? 'fill-[#FF4D4F] text-[#FF4D4F]' : 'text-muted-foreground')}
+              className={cn('h-5 w-5', followed ? 'fill-brand-blue text-brand-blue' : 'text-muted-foreground')}
               strokeWidth={1.75}
             />
           </Button>

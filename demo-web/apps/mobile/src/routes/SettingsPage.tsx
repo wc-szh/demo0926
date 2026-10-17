@@ -108,7 +108,7 @@ export function SettingsPage() {
   }
 
   return (
-    <div className="min-h-full bg-gradient-to-b from-profile-sky to-profile-gray pb-4">
+    <div className="min-h-full bg-page pb-4">
       <div className="sticky top-0 z-10 flex items-center gap-2 px-4 py-3">
         <Button variant="ghost" size="icon" className="h-9 w-9" onClick={() => navigate(-1)}>
           <ArrowLeft className="h-5 w-5" />
@@ -117,7 +117,7 @@ export function SettingsPage() {
       </div>
 
       <div className="space-y-3 p-3">
-        <div className="rounded-2xl border border-border bg-paper-white p-4 shadow-[var(--shadow-card)]">
+        <div className="rounded-2xl bg-paper-white p-4 shadow-[0_4px_16px_rgba(29,33,41,0.04)]">
           <h2 className="mb-3 text-sm font-medium">头像</h2>
           <AvatarPicker
             previewSrc={previewSrc}
@@ -127,7 +127,7 @@ export function SettingsPage() {
           />
         </div>
 
-        <div className="rounded-2xl border border-border bg-paper-white p-4 shadow-[var(--shadow-card)]">
+        <div className="rounded-2xl bg-paper-white p-4 shadow-[0_4px_16px_rgba(29,33,41,0.04)]">
           <h2 className="mb-3 text-sm font-medium">基本信息</h2>
           <div className="space-y-4">
             <div className="flex items-center gap-2">
@@ -154,7 +154,7 @@ export function SettingsPage() {
                     className={cn(
                       'rounded-2xl border px-3 py-2.5 text-sm transition-colors duration-200',
                       identityType === value
-                        ? 'border-mint-green/40 bg-accent font-medium text-mint-green'
+                        ? 'border-brand-blue/40 bg-accent font-medium text-brand-blue-deep'
                         : 'border-border bg-mist-gray/30 text-muted-foreground',
                     )}
                   >
@@ -176,7 +176,7 @@ export function SettingsPage() {
           </div>
         </div>
 
-        <div className="rounded-2xl border border-border bg-paper-white p-4 shadow-[var(--shadow-card)]">
+        <div className="rounded-2xl bg-paper-white p-4 shadow-[0_4px_16px_rgba(29,33,41,0.04)]">
           <h2 className="mb-3 text-sm font-medium">擅长技能</h2>
           <p className="mb-3 text-xs text-muted-foreground">勾选你擅长的方向，便于匹配任务</p>
           <div className="grid grid-cols-2 gap-3">
@@ -187,7 +187,7 @@ export function SettingsPage() {
                   key={skill}
                   className={cn(
                     'flex cursor-pointer items-center gap-2 rounded-sm border px-3 py-2.5 text-sm transition-colors duration-200',
-                    checked ? 'border-mint-green/40 bg-accent' : 'border-border',
+                    checked ? 'border-brand-blue/40 bg-accent' : 'border-border',
                   )}
                 >
                   <Checkbox checked={checked} onCheckedChange={() => toggleSkill(skill)} />
@@ -204,7 +204,7 @@ export function SettingsPage() {
 
         <div
           id="portfolio-section"
-          className="rounded-2xl border border-border bg-paper-white p-4 shadow-[var(--shadow-card)]"
+          className="rounded-2xl bg-paper-white p-4 shadow-[0_4px_16px_rgba(29,33,41,0.04)]"
         >
           <div className="mb-3 flex items-center justify-between">
             <h2 className="text-sm font-medium">作品集</h2>
@@ -226,7 +226,7 @@ export function SettingsPage() {
           )}
         </div>
 
-        <div className="rounded-2xl border border-border bg-paper-white p-4 shadow-[var(--shadow-card)]">
+        <div className="rounded-2xl bg-paper-white p-4 shadow-[0_4px_16px_rgba(29,33,41,0.04)]">
           <h2 className="mb-3 text-sm font-medium">账号信息</h2>
           <div className="space-y-3 text-sm">
             <div className="flex justify-between">

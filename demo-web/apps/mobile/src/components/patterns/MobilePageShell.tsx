@@ -1,11 +1,12 @@
+import type { ReactNode } from 'react'
 import { cn } from '@/lib/utils'
 
 interface MobilePageShellProps {
   title: string
   subtitle?: string
-  children: React.ReactNode
+  children: ReactNode
   className?: string
-  headerExtra?: React.ReactNode
+  headerExtra?: ReactNode
 }
 
 export function MobilePageShell({
@@ -16,8 +17,8 @@ export function MobilePageShell({
   headerExtra,
 }: MobilePageShellProps) {
   return (
-    <div className={cn('min-h-full bg-gradient-to-b from-profile-sky to-profile-gray pb-4', className)}>
-      <div className="flex items-start justify-between gap-3 px-4 pb-3 pt-5">
+    <div className={cn('min-h-full bg-page pb-4', className)}>
+      <div className="flex items-center justify-between gap-3 bg-gradient-to-b from-profile-sky to-page px-4 pb-3 pt-5">
         <div className="min-w-0">
           <h1 className="text-lg font-semibold">{title}</h1>
           {subtitle && <p className="mt-1 text-xs text-muted-foreground">{subtitle}</p>}

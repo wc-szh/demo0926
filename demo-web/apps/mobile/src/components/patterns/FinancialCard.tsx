@@ -50,7 +50,7 @@ export function FinancialCard({
   )
 
   return (
-    <div className={cn('rounded-2xl border border-border p-4 shadow-[var(--shadow-card)]', className)}>
+    <div className={cn('rounded-2xl bg-paper-white p-4 shadow-[0_4px_16px_rgba(29,33,41,0.04)]', className)}>
       <div className="mb-3 flex items-center">
         {showTitle && <p className="text-sm font-medium">我的资产(元)</p>}
         <button

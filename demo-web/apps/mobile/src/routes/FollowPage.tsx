@@ -33,7 +33,7 @@ export function FollowPage() {
       subtitle={followedJobs.length > 0 ? `共 ${followedJobs.length} 个任务` : '在任务大厅点击星标收藏任务'}
     >
       {followedJobs.length === 0 ? (
-        <div className="rounded-2xl border border-border bg-paper-white p-6 shadow-[var(--shadow-card)]">
+        <div className="rounded-2xl bg-paper-white p-6 shadow-[0_4px_16px_rgba(29,33,41,0.04)]">
           <EmptyState title="暂无关注任务" description="关注的任务会集中展示在这里，方便随时查看与申请" />
           <Button asChild className="mt-4 w-full">
             <Link to="/tasks/public">去任务大厅</Link>

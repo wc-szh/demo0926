@@ -26,7 +26,7 @@ export function WorkItemCard({ item, actions, trailing, className }: WorkItemCar
         : '公开申请'
 
   return (
-    <div className={cn('rounded-2xl border border-border bg-paper-white p-4 shadow-[var(--shadow-card)]', className)}>
+    <div className={cn('rounded-2xl bg-paper-white p-4 shadow-[0_4px_16px_rgba(29,33,41,0.04)]', className)}>
       <div className="flex items-start gap-2">
         <Link to={workItemDetailPath(item)} className="min-w-0 flex-1 active:opacity-80">
           <div className="flex flex-wrap items-center gap-2">

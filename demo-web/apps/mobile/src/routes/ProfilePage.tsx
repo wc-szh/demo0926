@@ -23,8 +23,8 @@ const dataMetrics = [
     key: 'level' as const,
     label: '当前等级',
     icon: Medal,
-    iconWrap: 'bg-[#FFF1F0] text-[#FF4D4F]',
-    valueClass: 'text-[#FF4D4F]',
+    iconWrap: 'bg-[#E8F4FF] text-brand-blue-deep',
+    valueClass: 'text-brand-blue-deep',
   },
   {
     key: 'tasks' as const,
@@ -60,7 +60,7 @@ export function ProfilePage() {
   }
 
   return (
-    <div className="min-h-full space-y-3 bg-gradient-to-b from-profile-sky to-profile-gray pb-4">
+    <div className="min-h-full space-y-3 bg-gradient-to-b from-profile-sky to-page pb-4">
       <ProfileHeaderSection
         displayName={profile.displayName}
         avatarSrc={avatarSrc}
@@ -82,7 +82,7 @@ export function ProfilePage() {
           className="bg-paper-white"
         />
 
-        <div className="rounded-2xl border border-border bg-paper-white p-4 shadow-[var(--shadow-card)]">
+        <div className="rounded-2xl bg-paper-white p-4 shadow-[0_4px_16px_rgba(29,33,41,0.04)]">
           <p className="mb-3 text-sm font-medium">我的数据</p>
           <div className="grid grid-cols-3 gap-2">
             {dataMetrics.map(({ key, label, icon: Icon, iconWrap, valueClass }) => (
@@ -113,7 +113,7 @@ export function ProfilePage() {
           </div>
         </div>
 
-        <div className="rounded-2xl border border-border bg-paper-white px-4 py-3 shadow-[var(--shadow-card)]">
+        <div className="rounded-2xl bg-paper-white px-4 py-3 shadow-[0_4px_16px_rgba(29,33,41,0.04)]">
           <div className="flex items-center justify-between text-sm">
             <span className="text-muted-foreground">入职日期</span>
             <span className="font-medium">{worker.joinedAt}</span>

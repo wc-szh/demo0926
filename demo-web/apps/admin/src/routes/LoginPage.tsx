@@ -50,7 +50,7 @@ export function LoginPage() {
                 key={account.username}
                 type="button"
                 onClick={() => fillDemo(account)}
-                className="flex w-full items-center justify-between rounded-sm border border-border bg-background px-3 py-2 text-left text-sm transition-colors duration-200 hover:border-mint-green/40"
+                className="flex w-full items-center justify-between rounded-sm border border-border bg-background px-3 py-2 text-left text-sm transition-colors duration-200 hover:border-brand-blue/40"
               >
                 <span className="font-medium">{account.displayName}</span>
                 <span className="text-xs text-muted-foreground">

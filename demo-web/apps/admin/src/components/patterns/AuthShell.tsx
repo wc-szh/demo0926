@@ -11,8 +11,8 @@ interface AuthShellProps {
 
 export function AuthShell({ title, description, children, footer, alternate }: AuthShellProps) {
   return (
-    <div className="flex min-h-screen flex-col bg-background">
-      <div className="bg-mint-green px-6 py-14 text-center text-paper-white">
+    <div className="relative flex min-h-screen flex-col overflow-hidden bg-page">
+      <div className="relative overflow-hidden bg-gradient-to-br from-[#7AD4FF] via-brand-blue to-[#1677FF] px-6 py-14 text-center text-paper-white">
         <div className="mx-auto max-w-md">
           <div className="mb-3 flex items-center justify-center gap-2">
             <span className="h-2 w-2 rounded-sm bg-paper-white" />
@@ -34,7 +34,7 @@ export function AuthShell({ title, description, children, footer, alternate }: A
           {alternate && (
             <p className="text-center text-sm text-muted-foreground">
               {alternate.label}{' '}
-              <Link to={alternate.to} className="font-medium text-mint-green hover:underline">
+              <Link to={alternate.to} className="font-medium text-brand-blue hover:underline">
                 {alternate.to.includes('register') ? '立即注册' : '去登录'}
               </Link>
             </p>

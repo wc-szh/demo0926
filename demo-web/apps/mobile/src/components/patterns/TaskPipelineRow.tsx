@@ -21,7 +21,7 @@ interface TaskPipelineRowProps {
 
 export function TaskPipelineRow({ counts }: TaskPipelineRowProps) {
   return (
-    <div className="rounded-2xl border border-border bg-paper-white px-3 py-4 shadow-[var(--shadow-card)]">
+    <div className="rounded-2xl bg-paper-white px-3 py-4 shadow-[0_4px_16px_rgba(29,33,41,0.04)]">
       <p className="mb-4 px-1 text-sm font-medium">我的任务</p>
 
       <div className="flex items-stretch">

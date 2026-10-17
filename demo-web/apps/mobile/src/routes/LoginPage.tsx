@@ -1,19 +1,11 @@
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { toast } from 'sonner'
+import { BrandMark } from '@/components/patterns/BrandMark'
 import { WeChatIcon } from '@/components/icons/WeChatIcon'
 import { isAuthenticated, setSession } from '@/lib/auth'
 import { mockWeChatAuthorize } from '@/lib/wechatAuth'
 import { cn } from '@/lib/utils'
-
-function BrandMark() {
-  return (
-    <div className="flex items-center justify-center gap-3">
-      <img src="/favicon.svg" alt="" className="h-14 w-14" aria-hidden="true" />
-      <span className="text-[32px] font-semibold tracking-tight text-mint-green">拾影</span>
-    </div>
-  )
-}
 
 export function LoginPage() {
   const navigate = useNavigate()
@@ -44,39 +36,48 @@ export function LoginPage() {
   }
 
   return (
-    <div className="relative flex min-h-screen flex-col bg-background">
+    <div className="relative flex min-h-screen flex-col overflow-hidden bg-paper-white">
       <div
-        className="pointer-events-none absolute -left-16 top-24 h-40 w-40 rounded-full bg-[#E8F5EE] opacity-80"
+        className="pointer-events-none absolute -right-10 -top-8 h-56 w-56 rounded-full bg-[#7AD4FF] opacity-80 blur-2xl"
         aria-hidden="true"
       />
       <div
-        className="pointer-events-none absolute -right-12 top-40 h-32 w-32 rounded-full bg-[#F3E8FF] opacity-70"
+        className="pointer-events-none absolute right-8 top-16 h-40 w-40 rounded-full bg-[#FFE08A] opacity-90 blur-2xl"
+        aria-hidden="true"
+      />
+      <div
+        className="pointer-events-none absolute -right-16 top-40 h-48 w-48 rounded-full bg-brand-blue opacity-70 blur-3xl"
+        aria-hidden="true"
+      />
+      <div
+        className="pointer-events-none absolute -bottom-16 -left-10 h-52 w-52 rounded-full bg-[#7AD4FF] opacity-50 blur-3xl"
         aria-hidden="true"
       />
 
-      <div className="flex flex-1 flex-col items-center justify-center px-6 pb-24 pt-16">
-        <BrandMark />
-
-        <div className="mt-16 w-full max-w-sm">
-          <button
-            type="button"
-            onClick={handleWeChatLogin}
-            disabled={loading}
-            className={cn(
-              'flex h-12 w-full items-center justify-center gap-2 rounded-lg text-base font-medium text-white transition-opacity duration-200',
-              'bg-[#07C160] active:opacity-90 disabled:opacity-70',
-            )}
-          >
-            <WeChatIcon className="h-5 w-5" />
-            {loading ? '授权中…' : '微信授权登录'}
-          </button>
+      <div className="relative flex flex-1 flex-col items-center justify-center px-8 pb-16">
+        <div className="flex items-center gap-3">
+          <BrandMark size={56} />
+          <span className="text-[34px] font-semibold tracking-tight text-[#1d4ed8]">拾影</span>
         </div>
+        <p className="mt-5 text-[18px] tracking-[0.28em] text-[#334155]">让接单，更轻松</p>
       </div>
 
-      <footer className="px-6 pb-10 text-center">
-        <p className="text-sm text-mint-green">关于拾影</p>
-        <p className="mt-2 text-xs text-muted-foreground">客服电话：400-888-0926</p>
-      </footer>
+      <div className="relative px-8 pb-10">
+        <button
+          type="button"
+          onClick={handleWeChatLogin}
+          disabled={loading}
+          className={cn(
+            'flex h-12 w-full items-center justify-center gap-2 rounded-xl text-base font-medium text-white',
+            'bg-[#07C160] transition-opacity duration-200 active:opacity-90 disabled:opacity-70',
+          )}
+        >
+          <WeChatIcon className="h-5 w-5" />
+          {loading ? '授权中…' : '微信授权登录'}
+        </button>
+        <p className="mt-6 text-center text-sm text-brand-blue">关于拾影</p>
+        <p className="mt-2 text-center text-xs text-muted-foreground">客服电话：400-888-0926</p>
+      </div>
     </div>
   )
 }
